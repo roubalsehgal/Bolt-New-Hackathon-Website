@@ -49,15 +49,43 @@ export default function Hero() {
           transition={{ duration: 1.2 }}
           className="text-center"
         >
-          {/* Event Badge - New Element */}
+          {/* Event Badge - Fixed jerking issue with smoother animation */}
           <motion.div
-            initial={{ scale: 0, opacity: 0 }}
+            initial={{ scale: 0.95, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            transition={{ delay: 0.1, duration: 0.5, type: "spring" }}
+            transition={{
+              delay: 0.1,
+              duration: 0.7,
+              type: "spring",
+              stiffness: 100,
+              damping: 15,
+            }}
             className="flex justify-center mb-6"
           >
-            <div className="bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-full px-6 py-2 border border-blue-400/30">
-              <span className="text-blue-200 font-semibold tracking-wide">
+            <div className="bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-full px-6 py-2 border border-blue-400/30 relative overflow-hidden">
+              {/* Metallic shimmer effect */}
+              <motion.div
+                className="absolute inset-0"
+                animate={{
+                  backgroundPosition: ["200% 0%", "-200% 0%"],
+                }}
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: "linear",
+                }}
+                style={{
+                  background:
+                    "linear-gradient(90deg, transparent 0%, rgba(192, 202, 245, 0) 35%, rgba(192, 210, 255, 0.15) 50%, rgba(192, 202, 245, 0) 65%, transparent 100%)",
+                  backgroundSize: "200% 100%",
+                }}
+              />
+              <span
+                className="text-blue-200 font-semibold tracking-wide relative z-10"
+                style={{
+                  textShadow: "0 0 1px rgba(200, 210, 255, 0.2)",
+                }}
+              >
                 Build. Break. Innovate
               </span>
             </div>
