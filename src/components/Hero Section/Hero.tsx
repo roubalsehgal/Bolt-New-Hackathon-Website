@@ -93,65 +93,66 @@ export default function Hero() {
 
           {/* Main Title - Enhanced with new animation */}
           <motion.div
-            initial={{ scale: 0.9, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="relative"
-          >
+  initial={{ scale: 0.9, opacity: 0 }}
+  animate={{ scale: 1, opacity: 1 }}
+  transition={{ duration: 1, delay: 0.2 }}
+  className="relative"
+>
             {/* Floating Code Elements - Enhanced */}
-            <motion.div className="absolute -left-4 top-1/2 transform -translate-y-1/2 opacity-20">
-              <pre className="text-left text-sm text-blue-400">
-                <code>{`function createFuture() {
+  <motion.div className="absolute -left-4 top-1/2 transform -translate-y-1/2 opacity-20">
+    <pre className="text-left text-sm text-blue-400">
+      <code>{`function createFuture() {
   return {
     innovation: unstoppable,
     limits: shattered,
     possibilities: infinite
   };
 }`}</code>
-              </pre>
-            </motion.div>
+    </pre>
+  </motion.div>
 
-            <motion.div className="absolute -right-4 top-1/2 transform -translate-y-1/2 opacity-20">
-              <pre className="text-left text-sm text-purple-400">
-                <code>{`async function breakBarriers() {
+  <motion.div className="absolute -right-4 top-1/2 transform -translate-y-1/2 opacity-20">
+    <pre className="text-left text-sm text-purple-400">
+      <code>{`async function breakBarriers() {
   while (true) {
     await build(impossible);
     redefine(possible);
   }
 }`}</code>
-              </pre>
-            </motion.div>
+    </pre>
+  </motion.div>
 
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight">
-              <motion.span
-                className="block bg-clip-text text-transparent bg-gradient-to-r from-blue-300 via-blue-500 to-purple-600"
-                animate={{
-                  backgroundPosition: ["0% center", "100% center", "0% center"],
-                }}
-                transition={{
-                  duration: 8,
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                }}
-              >
-                The World's Largest
-              </motion.span>
-              <motion.span
-                className="block bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-500 to-blue-300"
-                animate={{
-                  backgroundPosition: ["0% center", "100% center", "0% center"],
-                }}
-                transition={{
-                  duration: 8,
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                  delay: 2,
-                }}
-              >
-                Hackathon
-              </motion.span>
-            </h1>
-          </motion.div>
+  {/* Main Title with Reduced Vertical Space */}
+  <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight leading-[1.1] md:leading-[1.1] lg:leading-[1.1] overflow-visible">
+    <motion.span
+      className="block bg-clip-text text-transparent bg-gradient-to-r from-blue-300 via-blue-500 to-purple-600"
+      animate={{
+        backgroundPosition: ["0% center", "100% center", "0% center"],
+      }}
+      transition={{
+        duration: 8,
+        repeat: Infinity,
+        repeatType: "reverse",
+      }}
+    >
+      The World's Largest
+    </motion.span>
+    <motion.span
+      className="block bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-500 to-blue-300"
+      animate={{
+        backgroundPosition: ["0% center", "100% center", "0% center"],
+      }}
+      transition={{
+        duration: 8,
+        repeat: Infinity,
+        repeatType: "reverse",
+        delay: 2,
+      }}
+    >
+      Hackathon
+    </motion.span>
+  </h1>
+</motion.div>
 
           {/* Tagline - Enhanced */}
           <motion.div
