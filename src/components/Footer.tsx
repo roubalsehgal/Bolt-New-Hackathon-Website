@@ -159,7 +159,7 @@ export default function Footer() {
                 <Code size={14} className="mr-2" />
                 <span>Made with</span>
                 <Heart size={14} className="mx-1 text-red-500" />
-                <span>by the Hackathon Team</span>
+                <span>by the <a href="https://x.com/roubalsehgal" target="_blank"><u>Roubal Sehgal</u></a></span>
               </div>
             </div>
 

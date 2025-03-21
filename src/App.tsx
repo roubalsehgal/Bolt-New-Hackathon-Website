@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import JudgesSection from './components/Judges';
 import SponsorsSection from './components/Sponsors';
 import LatestUpdates from './components/LatestUpdates';
+import VerticalHackathonTimeline from './components/Timeline';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Hero />
       <Prizes />
       <JudgesSection />
+      <VerticalHackathonTimeline />
       <SponsorsSection />
       <LatestUpdates />
       <Footer />
